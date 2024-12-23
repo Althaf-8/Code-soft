@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>port</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Times New Roman', sans-serif;
+        background-color: darkviolet;
+        color: white;
+    }
+
+    #container {
+        margin: 1px;
+        padding: 1px;
+    }
+
+    .left {
+        font-size: 78PX;
+        font-style: initial;
+        font-weight: 500;
+        color: antiquewhite;
+    }
+
+    .left span {
+        color: red;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(245, 224, 197);
+        font-weight: 800;
+        padding: 15px;
+        margin: 4px;
+        height: 2px;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 53px;
+
+    }
+
+    nav ul li a:hover {
+        color: #4da6ff;
+        text-decoration: none;
+    }
+
+    .para {
+        color: white;
+        font-weight: 700;
+        font-size: xx-large;
+        text-transform: capitalize;
+        padding: 225px;
+        font-family: sans-serif;
+        font-style: oblique;
+
+    }
+
+    .ok {
+        font-size: 60%;
+    }
+
+    .cl {
+        color: rgb(247, 11, 66);
+    }
+
+    #header img {
+        width: 250px;
+        border: 50px;
+        float: right;
+        margin: 60px;
+        padding: 10px;
+        border: 1px solid #565656;
+        border-radius: 1px;
+    }
+
+    #header img:hover {
+        box-shadow: 0 0 100px rgba(204, 56, 231, 0.893);
+    }
+
+
+    #second {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20px;
+        padding: 10px;
+        gap: 50px;
+    }
+
+    h1 {
+        color: aliceblue;
+
+    }
+
+    h1:hover {
+        color: blue;
+    }
+
+    #second p {
+        text-align: right;
+        font-family: sans-serif;
+        padding: 20px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+
+    #second p:hover {
+        color: rgb(14, 185, 241);
+    }
+
+    body {
+        background-color: darkviolet;
+        color: #333;
+    }
+
+    body.dark-theme {
+        background-color: #000000;
+        color: #fff;
+    }
+
+    .progress-bar-container h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #eee;
+        letter-spacing: 1px;
+        font-size: 20px;
+        margin: 10PX;
+        padding: 5px;
+    }
+
+    .progress-bar {
+        width: 800px;
+        height: 5px;
+        margin-top: 10px;
+        border: 1px solid #565656;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 0 10px rgb(245, 159, 0);
+    }
+
+    .progress-bar-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bolder;
+        color: #0fabda;
+    }
+
+    .percentage {
+        display: block;
+        height: 100%;
+        background-color: orange;
+        border-radius: 5px;
+        animation: progress 1500ms ease-in 1;
+    }
+
+    .move {
+        display: flex;
+        justify-content: center;
+        border-style: double;
+        height: 100px;
+        padding: 100px;
+        align-items: center;
+        min-height: 85vh;
+    }
+
+    .java {
+        width: 65%;
+    }
+
+    .html {
+        width: 85%;
+    }
+
+    .bootstrap {
+        width: 65%;
+    }
+
+    .sql {
+        width: 75%;
+    }
+
+    .css {
+        width: 65%;
+    }
+
+    .javascript {
+        width: 55%;
+    }
+
+    .container {
+        width: 900px;
+        padding: 20px;
+        margin: 20px;
+        justify-content: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(176, 34, 34, 0.1);
+        text-align: center;
+    }
+
+    .EDU-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        box-shadow: 0 0 70px rgba(204, 56, 231, 0.893);
+    }
+
+    .container {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .container h2 {
+        font-size: 1.5em;
+        background-color: #ccc;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+
+    .container h2:hover {
+        color: lightcoral;
+    }
+
+    .container p {
+        font-size: 1em;
+        color: #000000;
+        line-height: 1.5;
+    }
+
+    .container p:hover {
+        color: violet;
+    }
+
+    .imge {
+        display: flex;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .middlediv {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 0 100px rgba(198, 103, 215, 0.893);
+    }
+
+    .middlediv h2 {
+        font-size: 1.5em;
+
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+
+    .middlediv h2:hover {
+        color: red;
+    }
+
+    .middlediv p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    .services-container :hover {
+        background-color: lightpink;
+    }
+
+    .change {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+    }
+
+    .contact-form-container,
+    .resume-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 90%;
+        margin: 10px;
+        box-shadow: 0 0 100px rgba(103, 206, 215, 0.893);
+    }
+
+    .resume-container h2:hover {
+        color: red;
+    }
+
+    .resume-container button:hover {
+        background-color: #0056b3;
+    }
+
+    form label {
+        margin-bottom: 5px;
+        display: block;
+        color: #060202;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .contact-form-container h2 {
+        text-align: center;
+        font-weight: bolder;
+        font-style: italic;
+        color: black;
+    }
+
+    .contact-form-container h2:hover {
+        color: lightseagreen;
+    }
+
+    form button,
+    .download-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #0056b3;
+    }
+
+    #responseMessage {
+        text-align: center;
+        margin-top: 15px;
+        color: #28a745;
+    }
+
+    @media (max-width: 480px) {
+        .contact-form-container {
+            padding: 15px;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            font-size: 14px;
+        }
+
+        form button:hover,
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #responseMessage {
+            text-align: center;
+            margin-top: 15px;
+            color: #28a745;
+        }
+    }
+
+    .contact-form-container,
+    .resume-container {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button,
+    .download-btn {
+        font-size: 14px;
+    }
+
+    #bootstrap {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        color: white;
+
+
+    }
+
+    #bootstrap a {
+        text-decoration: none;
+
+    }
+
+    #bootstrap i {
+        color: #007bff;
+
+    }
+
+    #bootstrap a:hover i {
+        color: white;
+
+    }
+
+    .footer-con {
+        color: rgb(184, 36, 36);
+    }
+
+    .footer-con h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: bolder;
+        color: #0fabda;
+    }
+
+    .footer-con h2:hover {
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="left">
+            <span class="C">A</span>LTHAF
+        </div>
+        <div class="right">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">RESUME</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <button id="theme-toggle">🌙</button>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="header">
+        <img src="./images/Snapchat-2077601.jpg" alt="me">
+        <p class="para"><span class="ok">full stack web developer</span> <br>
+            Hi ,I'm <span class="cl">Althaf</span><br>Shaik from Hyderabad.
+        </p>
+    </div>
+    <h1 class="ab">ABOUT ME</h1>
+    <div id="second">
+        <img class="toy"
+            src="./images/A good-looking male web developer working on a laptop with a clear background.png" alt="web"
+            width="400px">
+        <P class="me">"As a passionate and dedicated web developer, I am eager to contribute my skills to innovative
+            projects. With a strong foundation in Java, HTML, CSS, JavaScript, and Bootstrap, I excel in creating
+            responsive and user-friendly websites. I am proficient in working with popular frameworks like React and
+            have a solid understanding of databases, particularly MySQL. Continuously driven to learn and adapt to new
+            technologies, my goal is to deliver high-quality, efficient, and visually appealing web solutions that
+            exceed client expectations."</P>
+
+    </div>
+    <br>
+    <h1>SKILLS</h1>
+    <div class="move">
+        <div class="skills">
+            <div class="progress-bar-container">
+                <h2>JAVA : 65%</h2>
+                <div class="progress-bar">
+                    <span class="percentage java" 50></span>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <h2>HTML : 85%</h2>
+                <div class="progress-bar">
+                    <span class="percentage html"></span>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <h2>BOOTSTRAP : 65%</h2>
+                <div class="progress-bar">
+                    <span class="percentage bootstrap"></span>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <h2>SQL : 75%</h2>
+                <div class="progress-bar">
+                    <span class="percentage sql"></span>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <h2>CSS : 65%</h2>
+                <div class="progress-bar">
+                    <span class="percentage css"></span>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <h2>JavaScript : 55%</h2>
+                <div class="progress-bar">
+                    <span class="percentage javascript"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1>Education</h1>
+    <div class="EDU-container">
+        <div class="container">
+            <img class="imge" src="./images/images1-removebg-preview.png" alt="bec" width="50px">
+            <h2>Bapatla engineering college</h2>
+            <p>"I finished my MCA (MASTER OF COMPUTER APPLICATION)at Bapatla Engineering College achieving
+                a CGPA of 7.71."</p>
+        </div>
+        <div class="container">
+            <img class="imge" src="./images/yw51etz1.orh2.webp" alt="bec" width="50px">
+            <h2>Sri vekateswara degree college</h2>
+            <p>"I completed my B.Com degree in Computers at Sri Venkateswara Degree College, achieving a CGPA of 7.5."
+            </p>
+        </div>
+        <div class="container">
+            <img class="imge" src="./images/yw51etz1.orh2.webp" alt="bec" width="50px">
+            <h2>Sri gudibandi somireddy college</h2>
+            <p>"I completed my Intermediate education with MEC at Sri Gudibandi
+                Somireddy College, achieving a CGPA of 7.25."</p>
+        </div>
+        <div class="container">
+            <img class="imge" src="./images/images3-removebg-preview.png" alt="bec" width="50px">
+            <h2>krishnaveni talent school</h2>
+            <p>"I completed my 10th grade at Krishnaveni Talent School in Manthani, Telangana, achieving a CGPA of 7.7."
+            </p>
+        </div>
+    </div>
+    <br>
+    <h1>Services</h1>
+    <div class="services-container">
+        <div class="middlediv">
+            <h2>Frontend</h2>
+            <p>I am good at front-end development and have good knowledge of HTML5, CSS, Bootstrap, and JavaScript.</p>
+        </div>
+        <div class="middlediv">
+            <h2>Backend</h2>
+            <p>I am good at backend development and have good knowledge in C++ and Java.</p>
+        </div>
+        <div class="middlediv">
+            <h2>Database</h2>
+            <p>I am good at databases and have good knowledge in SQL and MySQL.</p>
+        </div>
+    </div>
+
+    <br>
+    <div class="change">
+        <div class="contact-form-container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <p id="responseMessage"></p>
+        </div>
+    </div>
+    <div class="resume-container">
+        <h2>Download My Resume</h2>
+        <a href="C:\Users\altha\OneDrive\Desktop\Althaf.2.resume.pdf" download>
+            <button class="download-btn">Download Resume</button>
+        </a>
+    </div>
+    <div id="bootstrap">
+        <a href="https://www.linkedin.com/in/mohedeen-althaf-shaik-527bb02a8/" target="_blank"
+            rel="noopener noreferrer">
+            <i class="bi bi-linkedin fs-2 me-3"></i>
+        </a>
+        <a href="https://github.com/Althaf-8" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github fs-2"></i>
+        </a>
+        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AeZLP98E4AdvJGRt9s4jegFoSqVHDdp_q4yvr5Mf4EfMEZOhlAN-UdvptGgIgQeXGDkzYUrGPOWx0Q&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1982081979%3A1734717710650390&ddm=1"
+            target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-envelope fs-2"> shaikmohedeenalthaf@gmail.com</i>
+        </a>
+        <i class="bi bi-telephone fs-2"> 8886369149 </i>
+    </div>
+
+
+    <div class="footer-con">
+        <h2> &#128512;THANK YOU FOR CONSERDING MY APPLICATION &#128512;</h2>
+    </div>
+</body>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+    });
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        if (name && email && message) {
+            document.getElementById("responseMessage").textContent = "Thank you for contacting me!";
+            document.getElementById("responseMessage").style.color = "#28a745";
+            document.getElementById("contactForm").reset();
+        } else {
+            document.getElementById("responseMessage").textContent = "Please fill out all fields.";
+            document.getElementById("responseMessage").style.color = "red";
+        }
+    });
+</script>
+
+</html>
